@@ -15,9 +15,11 @@ use App\Http\Controllers\BkashController;
 */
 
 
-
+// Route::get('/',function(){
+//     return view('welcome');
+// });
 // Checkout IFrame User
-Route::get('/pay', [BkashController::class, 'pay'])->name('pay');
+Route::get('/', [BkashController::class, 'pay'])->name('pay');
 Route::post('/bkash/create', [BkashController::class, 'create'])->name('create');
 Route::post('/bkash/execute', [BkashController::class, 'execute'])->name('execute');
 
